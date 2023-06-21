@@ -1,3 +1,4 @@
+
 package com.example.backend;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
@@ -25,7 +26,7 @@ public class Parse {
             gson = new GsonBuilder().setPrettyPrinting().create();//gson con prettyprint
             String data= gson.toJson(Controlador.info);
 
-            FileWriter archivo = new FileWriter(String.valueOf(new InputStreamReader(getClass().getClassLoader().getResourceAsStream("Covid19-TIA_ZonasBásicasSalud.json"))),false);
+            FileWriter archivo = new FileWriter(String.valueOf(new InputStreamReader(getClass().getClassLoader().getResourceAsStream("template.json"))),false);
             archivo.write(data);
             archivo.close();
             return 1;
@@ -36,3 +37,36 @@ public class Parse {
         }
     }
 }
+/*
+package com.example.backend;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.io.File;
+import java.io.IOException;
+
+public class Parse {
+    private static final String JSON_FILE_PATH = "../resources/template.json";
+    private static final ObjectMapper objectMapper = new ObjectMapper();
+
+    public Info Extraer_datos() {
+        try {
+            File file = new File(JSON_FILE_PATH);
+            return objectMapper.readValue(file, Info.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public int Guardar_datos() {
+        try {
+            objectMapper.writeValue(new File(JSON_FILE_PATH), Controlador.info);
+            return 1;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return -1;
+        }
+    }
+}
+*/

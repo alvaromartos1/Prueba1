@@ -1,0 +1,9 @@
+{
+  "data": [
+    {
+      "nombre": "producto",
+      "categoria": "categoria",
+      "precio": 3.0
+    }
+  ]
+}

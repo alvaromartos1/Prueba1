@@ -35,7 +35,7 @@ public class Controlador {
         return new ResponseEntity<>(info.data, HttpStatus.CREATED);
     }
 
-    @PutMapping(value = "/data/codigo_geometria={id}",
+    @PutMapping(value = "/data/codigo={id}",
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
 

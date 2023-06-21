@@ -1,4 +1,6 @@
-[
+
+{
+  "data": [
   {
     "nombre": "producto",
     "categoria": "categoria",
@@ -6,3 +8,4 @@
     "EAN13": "0322500532677"
   }
 ]
+}
