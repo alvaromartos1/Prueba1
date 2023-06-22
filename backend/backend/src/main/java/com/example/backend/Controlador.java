@@ -35,7 +35,7 @@ public class Controlador {
         return new ResponseEntity<>(info.data, HttpStatus.CREATED);
     }
 
-    @PutMapping(value = "/data/codigo={id}",
+    @PutMapping(value = "/data/EAN13={id}",
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
 
@@ -43,7 +43,7 @@ public class Controlador {
     {
         boolean elementFound = false;
         for (int i = 0; i < info.data.size(); i++) {
-            if (info.data.get(i).codigo.equals(id)) {
+            if (info.data.get(i).EAN13.equals(id)) {
                 info.data.set(i, newData);
                 elementFound = true;
                 break;

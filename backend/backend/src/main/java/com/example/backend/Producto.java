@@ -13,14 +13,14 @@ public class Producto {
     public String categoria;
     @JsonProperty("precio")
     public double precio;
-    @JsonProperty("codigo")
-    public String codigo;
+    @JsonProperty("EAN13")
+    public String EAN13;
 
-    public Producto(String nombre, String categoria, double precio, String codigo) {
+    public Producto(String nombre, String categoria, double precio, String EAN13) {
         this.nombre = nombre;
         this.categoria = categoria;
         this.precio = precio;
-        this.codigo = codigo;
+        this.EAN13 = EAN13;
     }
 
     public String getNombre() {
@@ -47,12 +47,12 @@ public class Producto {
         this.precio = precio;
     }
 
-    public String getCodigo() {
-        return codigo;
+    public String getEAN13() {
+        return EAN13;
     }
 
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
+    public void setEAN13(String EAN13) {
+        this.EAN13 = EAN13;
     }
 
     public Producto(){
@@ -66,7 +66,7 @@ public class Producto {
                 "nombre='" + nombre + '\'' +
                 ", categoria='" + categoria + '\'' +
                 ", precio=" + precio +
-                ", codigo='" + codigo + '\'' +
+                ", EAN13='" + EAN13 + '\'' +
                 '}';
     }
 }
