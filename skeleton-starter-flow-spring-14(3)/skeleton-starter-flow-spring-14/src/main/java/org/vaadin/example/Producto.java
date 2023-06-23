@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Producto {
 
-
     @JsonProperty("nombre")
     public String  nombre;
     @JsonProperty("categoria")
@@ -56,7 +55,6 @@ public class Producto {
     public void setEAN13(String EAN13) {
         this.EAN13 = EAN13;
     }
-
 
     @Override
     public String toString() {
