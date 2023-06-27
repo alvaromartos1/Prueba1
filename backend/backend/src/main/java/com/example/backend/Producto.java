@@ -14,9 +14,9 @@ public class Producto {
     @JsonProperty("precio")
     public double precio;
     @JsonProperty("EAN13")
-    public String EAN13;
+    public long EAN13;
 
-    public Producto(String nombre, String categoria, double precio, String EAN13) {
+    public Producto(String nombre, String categoria, double precio, long EAN13) {
         this.nombre = nombre;
         this.categoria = categoria;
         this.precio = precio;
@@ -47,11 +47,11 @@ public class Producto {
         this.precio = precio;
     }
 
-    public String getEAN13() {
+    public long getEAN13() {
         return EAN13;
     }
 
-    public void setEAN13(String EAN13) {
+    public void setEAN13(long EAN13) {
         this.EAN13 = EAN13;
     }
 

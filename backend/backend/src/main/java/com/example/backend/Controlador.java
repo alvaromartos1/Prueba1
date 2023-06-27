@@ -39,8 +39,9 @@ public class Controlador {
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
 
-    public static ResponseEntity<ArrayList<Producto>> updateUser (@PathVariable("id") String id, @RequestBody Producto newData)
+    public static ResponseEntity<ArrayList<Producto>> updateUser (@PathVariable("id") long id, @RequestBody Producto newData)
     {
+        /*
         boolean elementFound = false;
         for (int i = 0; i < info.data.size(); i++) {
             if (info.data.get(i).EAN13.equals(id)) {
@@ -49,6 +50,17 @@ public class Controlador {
                 break;
             }
         }
+        */
+        boolean elementFound = false;
+        for (int i = 0; i < info.data.size(); i++) {
+            if (info.data.get(i).EAN13 == id) {
+                info.data.set(i, newData);
+                elementFound = true;
+                break;
+            }
+        }
+
+
 
         if (elementFound) {
             return new ResponseEntity<>(info.data, HttpStatus.OK);
